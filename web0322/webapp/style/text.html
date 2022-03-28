@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>텍스트 관련 스타일</title>
+
+	<link rel="stylesheet" href="../css/common.css">
+
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+		body { font-family: 'Noto Sans KR', sans-serif; }
+		#shadow { text-shadow: 2px 1px 2px grey;} /*좌우 상하 번짐의정도 색상*/
+		#content { width: 150px; 
+			border: 1px solid #222;
+/* 			white-space: normal; */
+/* 			white-space: nowrap; */
+/* 			white-space: pre; */
+/* 			white-space: pre-wrap; */
+/* 			white-space: pre-line; */
+			white-space: nowrap;
+			text-overflow: ellipsis; /* 말줄임표시 */
+			overflow: hidden; /*영역을 벗어나면 안보이게*/
+		}
+/* 보통 normal과 nowrap,text-overflow: ellipsis; 형식을 많이씀 */
+/* 말줄임되어진 태그의 내용에 대해 마우스를 갖다 올렸을때 보이게 처리 */		
+		#content:hover { overflow:visible;} /* id:hover 꼭 붙여써야됨 */
+
+/* normal : 공백은 한개로 합쳐져보인다, 여러 줄도 병합되어 한줄로 합쳐짐, 자동 줄바꿈 됨 */
+/* nowrap : 공백은 한개로 합쳐져보인다, 여러 줄도 병합되어 한줄로 합쳐짐, 자동 줄바꿈 안됨 */
+/* pre : 공백 유지됨, 여러 줄 유지됨, 자동 줄바꿈 안됨 */
+/* pre-wrap : 공백 유지됨, 여러 줄 유지됨, 자동 줄바꿈 됨 */
+/* pre-line : 공백은 한개로 합쳐져보인다, 여러 줄 유지됨, 자동 줄바꿈 됨 */
+
+		table td, th { text-align: left; text-indent: 20px;}
+		th, td { padding: 5px 0; line-height: 30px; }
+/* text-indent : 들여쓰기 */
+
+		ul { list-style-type: none;}
+		
+		ul.menu { display: inline-block; width: 200px; }
+		/* ul#menu, #menu 다됨 (띄어쓰기 있으면 자손을 의미해서 띄어쓰기 없어야됨) */
+		/* ul : display가 block : 너비가 100%
+				display : inline-block; : 너비를 지정해서 적용시킬 수 있다
+				block 이 아니면 list-style-type 이 적용되지 않아 none 이 된다
+		*/
+		
+		.bg { width:500px; 
+			height: 300px; 
+			border: 1px solid #222; 
+			margin: 20px auto;}
+			
+		#bg1, #bg2 { background-image: url("../images/been.jpg")}
+		
+		#bg1 { background-size: 100px;}
+		
+		#bg2 { background-size: 200px; 
+			background-repeat: no-repeat; 
+			background-position: center;}
+		
+		#bg3 { background-image: url("../images/eezz.jpg");
+			background-size: cover; /* 배경이미지를 확대/축소해서 요소 전체를 채우는 형태 */}
+			
+		footer { font-size : 12px;}
+		address { font-style : inherit;/* normal */}
+		/* footer, address 는 이름을 가진 div에 해당한다 */
+	</style>
+
+</head>
+<body>
+	<span>테스트</span>
+	<a href='http://localhost:80/web0322/index.html'>홈으로</a>
+	<a href="../html/ex_input.html">추가input실습</a>
+	<a href="style.html">스타일 인덱스</a>
+	<a href="selector.html">선택자실습</a>
+
+	<h3>색상과 배경관련 스타일</h3>
+	
+	<ul>
+		<li>background-image : 배경이미지를 url로 지정한다</li>
+		<li>background-size : 배경이미지의 크기 지정</li>
+		<li>background-repeat : 배경이미지의 반복여부</li>
+		<li>background-position : 배경이미지의 위치</li>
+	</ul>
+	
+	<div id="bg1" class="bg"></div>
+	<div id="bg2" class="bg"></div>
+	<div id="bg3" class="bg"></div>
+
+
+	<hr>
+	<h3>목록 스타일</h3>
+	
+	<ul>
+		<li>주요뉴스</li>
+		<li>정치</li>
+		<li>사회</li>
+		<li>경제</li>
+	</ul>
+	<ul class="menu">
+		<li>주요뉴스</li>
+		<li>정치</li>
+		<li>사회</li>
+		<li>경제</li>
+	</ul>
+	<ul class="menu">
+		<li>주요뉴스</li>	
+		<li>정치</li>
+		<li>사회</li>
+		<li>경제</li>
+	</ul>
+	
+	
+	<hr>
+	<h3>문단 스타일</h3>
+	
+	<p>텍스트로 된 문단의 정렬, 들여쓰기, 줄간격 등에 대한 스타일</p>
+	
+	<table>
+		<colgroup>
+			<col width="150px">
+			<col width="300px">
+		</colgroup>
+		<caption>기본정보</caption>
+		<tr>
+			<th>아이디</th>
+			<td>hong</td>
+		</tr>
+		<tr>
+			<th>성명</th>
+			<td>홍길동</td>
+		</tr>
+		<tr>
+			<th>전화번호</th>
+			<td>010-0000-0000</td>
+		</tr>
+		<tr>
+			<th>특징</th>
+			<td>Google Fonts is a library of 1,364 free licensed font families and APIs for convenient use via CSS and Android</td>
+		</tr>
+	</table>
+
+
+	<hr>
+	<h2>텍스트 관련 스타일</h2>
+	
+	<h3>텍스트 스타일</h3>
+	
+	<p>글꼴자체가 아닌 글자들(텍스트들)에 대한 스타일을 말한다</p>
+	<ul>
+		<li>text-shadow : 그림자 효과</li>
+		<li>white-space : 공백문자(스페이스바), 탭, 줄바꿈에 대한 처리</li>
+		<li></li>
+	</ul>
+	<p id="shadow">텍스트에 그림자효과 주기</p>
+	<p id="content">공백              문자, 탭, 줄바꿈에 대한 처리</p>
+	
+	
+	<hr>
+	<h3>글꼴 관련 스타일</h3>
+	<p>font(글꼴) : 크기, 굵기, 글꼴 형태를 지정할 수 있다</p>
+	
+	<table>
+		<tr>
+			<th>font-weight</th>
+			<td>폰트의 굵기: normal(기본), bold, bolder</td>
+		</tr>
+		<tr>
+			<th>font-style</th>
+			<td>기울기: normal(기본), italic</td>
+		</tr>
+		<tr>
+			<th>font-size</th>
+			<td>폰트의 크기: 보통 px로 지정한다</td>
+		</tr>
+		
+	</table>
+	<hr>
+	<footer>한국경영원 인재개발원
+		<address>광주광역시 북구 경양로 170 한경빌딩 5층</address>
+	</footer>
+</body>
+</html>

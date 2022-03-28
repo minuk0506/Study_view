@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>이미지태그 실습</title>
+		
+		<style>
+			a{
+				text-decoration : none;
+				color : inherit; /* initial */
+				cursor : pointer;
+			}
+		</style>
+		<!-- text-decoration이 링크에 언더바 등을 조절하는 태그 -->
+		<!-- color : initial a태그 색상을 초기화 -->
+		<!-- color : inherit 부모로 부터 받은 색상을 받음 (아직 지정한 색이 없으니 기본색으로 나왔음)-->
+		<!-- cusor : pointer 링크에 마우스를 올렸을 때 모양 조정 (pointer : 손모양) -->
+	</head>
+	<body>
+		
+		<h2>링크만들기</h2>
+		
+		<p>
+			a태그 : 링크는 현재 웹 페이지에서 다른 페이지로 연결하기 위한 형태
+			<br>
+			a태그로 링크를 적용한다
+			<br>
+			target : 어떻게 열 것 인지
+			<br>
+			target 속성값 blank : 새 창으로 열겠다
+			<br>
+			target 속성값 self : 이 창에서 열기(지정하지 않으면 기본이 셀프)
+			<br>
+			현재 페이지에서 특정 페이지로 연결할 수도 있는데 이런 형태를 앵커라고 한다
+			<br>
+			<br>
+			a태그에 onclick="alert(내용)"
+			<br>
+			(onclick : 클릭시 이벤트)
+			<br>
+			(alert() : alert창 띄우기)
+			<br>
+		</p>
+		
+		<p><a href="http://www.naver.com" target="_blank">새창네이버</a></p>
+		<p><a href="http://www.naver.com" target="_self">폴더 내의 열기</a></p>
+		<p><a href="#no1" target="_self">id로 앵커걸기</a></p>
+		<p><a href="#no2" target="_self">id로 앵커걸기2</a></p>
+		
+		<p>
+			id는 한번만 쓸 수 있다 
+			<br>
+			형식 : ="#id"
+			<br>
+			(id="no1"을 한번 썼으면 다른 곳엔 쓰면 안됨)
+			<br>
+			지정 아이디 없이 a href="#" 하면 맨 위로 올라감
+		</p>
+		
+		<h2 id="no1">이미지태그</h2>
+		
+		<p>
+			img 태그 : 이미지태그
+		</p>
+		
+		<h2>폴더내의 이미지표현</h2>
+		
+		<p>
+			이미지 소스 불러오기
+	 	</p>
+	 	
+	 	<p>
+			현재, 하위 폴더에 있을 경우 형식 <img src='./image/navy.jpg' alt="소스코드형식">
+			또는 <img src='image/navy.jpg' alt="소스코드형식">
+			<br>
+			상위 폴더에 있을 경우 형식 <img src='../0318/image/navy.jpg' title="소스코드형식">
+		</p>
+		
+		<p>
+			. = 현재위치
+			.. = 위로
+		</p>
+		
+		<img src='../image/navy.jpg' width="500px" height="400px">
+		<img src='../image/navy.jpg' style="width : 500px; height : 400px;">
+		
+		<h2 id="no2">웹상의 이미지표현</h2>
+	
+	 	<p>
+	 		이미지 주소 복사해서 붙여넣기
+	 	</p> 
+	 	
+	 	<img src='https://cdn.pixabay.com/photo/2016/11/19/16/56/adventure-1840310_960_720.jpg'>
+	 	
+	 	<br>
+	 	<br>
+	 	
+	 	<p>
+	 		alt="" : 이미지파일이 정상 로딩이 되지 않는 경우 이미지에 대한 설명을 넣는 속성 
+	 		<br>
+		 	title="" : 마우스를 갖다 대었을 때 보여지는 설명이 적힌 말풍선
+	 	</p>
+	 	
+	 	<a href="#">맨 위로</a>
+	 	
+	</body>
+</html>

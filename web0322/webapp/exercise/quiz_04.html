@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문제04</title>
+
+	<style>
+	@font-face{
+    font-family: 'Malgun Gothic';
+    src: url('../css/malgungothic/MalgunGothic.woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+	}
+		ul { list-style-type: none;}
+		li{ line-height: 30px;}
+		body > div {margin-left: 20px; border:1px solid; padding: 25px;
+		/* background-color: #0330fc; opacity: 0.5; (투명도)*/ 
+			background-color: rgba(89, 169, 255, 0.5);}
+		label{ width:400px; display:inline-block;}
+		.button {margin: 0px;}
+		h1 { font-family: 'Malgun Gothic';}
+	</style>
+
+</head>
+<body>
+	<a href="../index.html">홈으로</a>
+	<div>
+		<h1>프런트엔드 개발자 지원서</h1>
+		
+		<p>HTML, CSS, 자바스크립트의 기술을 이해하고 실무 경험이 있는 분을 찾습니다.
+		
+		<hr>
+		<form>
+			<h3>개인 정보</h3>
+			<ul>
+				<li><label>이름<input type="text" placeholder="공백 없이 입력하세요"></label></li>
+				<li><label>연락처<input type="tel"></label></li>
+			</ul>
+			<h3>지원 분야</h3>
+			<ul>
+				<li><label><input type="radio" name="field">웹 퍼블리싱</label></li>
+				<li><label><input type="radio" name="field">웹애플리케이션 개발</label></li>
+				<li><label><input type="radio" name="field">개발 환경 개선</label></li>
+			</ul>
+			<h3>지원 동기</h3>
+				<div>
+					<textarea rows="5" cols="60" placeholder="본사 지원 동기를 간략히 써 주세요."></textarea>
+				</div>
+				<div>
+				<input type="submit" value="접수하기" class="button">
+				<input type="reset" value="다시 쓰기" class="button">
+				</div>
+		</form>
+	</div>
+</body>
+</html>

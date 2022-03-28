@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+	<style>
+		
+		div{ width: 300px; border: 1px solid #ccc; padding: 50px; margin:50px;}
+		ul{ list-style-type: none; padding: 10px 30px;}
+		#first ul li{ border: 1px solid; padding: 20px; margin: 5px;}
+		
+/* 		#second ul li{ border: 1px solid; padding: 20px; margin-bottom: 5px;} */
+/* 		#second ul li:nth-child(4) {margin-bottom: 0px;} (ntn 특정 자식만 찾아가기)*/
+/*		
+		#second ul li{ border: 1px solid; padding: 20px;}
+		#second ul li{ margin-bottom: 10px;}
+		#second ul li:last-child{margin-bottom: 0;} (last 마지막만)
+*/	
+		#second ul li{ border: 1px solid; padding: 20px;}
+		#second ul li:not(:last-child){ margin-bottom: 10px;}
+	</style>
+
+</head>
+<body>
+	<a href="../index.html">홈으로</a>
+	
+	<div id="first">
+		<ul>
+			<li>회사 소개</li>
+			<li>도서</li>
+			<li>자료실</li>
+			<li>동영상 강의</li>
+		</ul>
+	</div>
+
+	<div id="second">
+		<ul>
+			<li>회사 소개</li>
+			<li>도서</li>
+			<li>자료실</li>
+			<li>동영상 강의</li>
+		</ul>
+	</div>
+	
+</body>
+</html>

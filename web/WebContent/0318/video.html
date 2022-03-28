@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>비디오파일 실습</title>
+	</head>
+	<body>
+	
+		<h2>비디오 파일</h2>
+	
+		<video width="400px" height="300px" controls
+			poster ="../image/oops.jpg"
+			src="../video/Blue.mp4" autoplay muted>
+			
+			<track kind="subtitles" src="../video/smi.vtt"
+				srclang="ko" default>
+		</video>
+			
+		<video width="400px" height="300px" controls
+			poster ="../image/oops.jpg">
+			
+			<source src="../video/Blue0.mp4">
+		</video>
+		
+		<p>
+			autoplay : 창에 들어가자마자 재생 (사용하려면 muted와 함께 사용)
+			<br>
+			muted : 소리끄기 
+			<br>
+			controls : 컨트롤패널 만들기
+			<br>
+			poster : 비디오파일이 존재하지 않을 때 대체이미지를 보여줌
+			<br>
+			track kind="subtitles" : 자막삽입
+			<br>
+			srclang="ko" 소스 랭귀지(자막언어)
+		</p>
+	
+	</body>
+</html>

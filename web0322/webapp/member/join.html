@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>입력 양식 태그 실습</title>
+<link rel="stylesheet" href='../css/common.css'>
+
+<!-- 입력항목의 값(데이터)를 전송하려면 form태그에 선언한다
+	각입력항목은 name 속성을 가져야 한다
+	: 입력 항목의 데이터가  -->
+
+	<style>
+		table { border-collapse : collapse;}
+		th, td { border : 1px solid;
+			 padding : 10px;
+		}
+		
+		th { width : 100px; text-align : center;
+		}
+		td { width : 300px;
+		}
+		input[name=phone] {width: 60px;}
+		textarea { resize : none;
+		}
+		
+	</style>
+</head>
+<body>
+	<div><a href='http://localhost:80/web0322/index.html'>홈으로</a></div>
+
+	<div align="center">
+	<form action="" method="post" enctype="multipart-formdata">
+		<table>
+			<tr>
+				<th colspan="2" style="font-size: 25px; border: none; " >회원가입정보</th>
+			</tr>
+			<tr>
+				<th>아이디</th>
+				<td><input type="text" name="id"></td>
+			</tr>
+			<tr>
+				<th>비밀번호</th>
+				<td><input type="password" name="pass"></td>
+			</tr>
+			<tr>
+				<th>비밀번호확인</th>
+				<td><input type="password" name="checkpass"></td>
+			</tr>
+			<tr>
+				<th>이름</th>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+				<th>성별</th>
+				<td>
+					<input type="radio" name="gender" value="male" id="mail">남<label for="#mail"></label>
+					<label><input type="radio" name="gender" value="female">여</label>
+				</td>
+			</tr>
+			<tr>
+				<th>전화번호</th>
+				<td>
+					<select name="phonecode">
+						<option>010</option>
+						<option selected>011</option>
+						<option>016</option>
+						<option>017</option>
+					</select>
+					<input type="text"  name="phone">
+					<input type="text"  name="phone">
+				</td>
+			</tr>
+			<tr>
+				<th>SMS수신여부</th>
+				<td>
+					<label><input type="radio" name="SMS">수신함</label>
+					<label><input type="radio" name="SMS">수신거부</label>
+				</td>
+			</tr>
+			<tr>
+				<th>이메일</th>
+				<td>
+					<input type="text" name="email">@
+					<select>
+						<option>naver.com</option>
+						<option>daum.net</option>
+						<option>gmail.com</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>사진등록</th>
+				<td>
+					<input type="file" name="picture">
+				</td>
+			</tr>
+			<tr>
+				<th colspan="2"><input type="submit" value="회원가입"></th>
+			</tr>
+		</table>
+	</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>실습정리</title>
+		
+	<style>
+		table {width:500px; 
+			height:170px; 
+			border-collapse: collapse; 
+		}
+	
+		th, td {border:1px solid;
+			padding:20px 10px 5px;
+			text-align: center;
+		}
+	
+		table th {background-color: #dee1e6; 
+		}
+	
+		a{text-decoration : none;
+			color : #1aadd6;
+			cursor : pointer;
+		}
+	</style>
+	
+	</head>
+	
+	<body>
+	
+		<h1>현재 페이지 구성</h1>
+		
+		<ul>
+			<li><a href="#food">식단표</a></li>
+			<li><a href="#link">링크</a></li>
+			<li><a href="#image">이미지</a></li>
+			<li><a href="#video">비디오</a></li>
+		</ul>
+		
+		<h1>화면연결하기</h1>
+		
+		<ul>
+			<li><a href="../0317/ex0317_1.html" target="_blank">식단표화면</a></li>
+			<li><a href="image.html" target="_blank">이미지화면</a></li>
+			<li><a href="video.html" target="_blank">비디오화면</a></li>
+		</ul>
+		
+		<h2 id="food">식단표</h2>
+		<table>
+			<caption>식단표</caption>
+			<tr>
+				<th>시간/요일</th>
+				<th>월요일</th>
+				<th>화요일</th>
+				<th>수요일</th>
+				<th>목요일</th>
+				<th>금요일</th>
+			</tr>
+			<tr>
+				<th>아침</th>
+				<td>샐러드</td>
+				<td>된장국</td>
+				<td rowspan='2'>생선조림</td>
+				<td>샌드위치</td>
+				<td>현미밥</td>
+			</tr>
+			<tr>
+				<th>점심</th>
+				<td colspan='2'>카레</td>
+				<td>냉면</td>
+				<td>햄버거</td>		
+			</tr>
+			<tr>
+				<th>저녁</th>
+				<td>해물찜</td>
+				<td>등갈비</td>
+				<td>쌀국수</td>
+				<td>피자</td>
+				<td>치킨</td>		
+			</tr>
+		</table>
+		
+		<a href="#">페이지 구성으로</a>
+		
+		<h2 id="link">링크만들기</h2>
+		
+		<p>
+			a태그 : 링크는 현재 웹 페이지에서 다른 페이지로 연결하기 위한 형태
+			<br>
+			a태그로 링크를 적용한다
+			<br>
+			target : 어떻게 열 것 인지
+			<br>
+			target 속성값 blank : 새 창으로 열겠다
+			<br>
+			target 속성값 self : 이 창에서 열기(지정하지 않으면 기본이 셀프)
+			<br>
+			현재 페이지에서 특정 페이지로 연결할 수도 있는데 이런 형태를 앵커라고 한다
+			<br>
+			<br>
+			a태그에 onclick="alert(내용)"
+			<br>
+			(onclick : 클릭시 이벤트)
+			<br>
+			(alert() : alert창 띄우기)
+			<br>
+		</p>
+		
+		<p><a href="http://www.naver.com" target="_blank">새창네이버</a></p>
+		<p><a href="http://www.naver.com" target="_self">폴더 내의 열기</a></p>
+		<p><a href="#image" target="_self">id로 앵커걸기</a></p>
+		<p><a href="#no2" target="_self">id로 앵커걸기2</a></p>
+		
+		<p>
+			id는 한번만 쓸 수 있다 
+			<br>
+			형식 : ="#id"
+			<br>
+			(id="no1"을 한번 썼으면 다른 곳엔 쓰면 안됨)
+			<br>
+			지정 아이디 없이 a href="#" 하면 맨 위로 올라감
+		</p>
+		
+		<a href="#">페이지 구성으로</a>
+		
+		<h2 id="image">이미지태그</h2>
+		
+		<p>
+			img 태그 : 이미지태그
+		</p>
+		
+		<h2>폴더내의 이미지표현</h2>
+		
+		<p>
+			이미지 소스 불러오기
+	 	</p>
+	 	
+	 	<p>
+			현재, 하위 폴더에 있을 경우 형식 <img src='./image/navy.jpg' alt="소스코드형식">
+			또는 <img src='image/navy.jpg' alt="소스코드형식">
+			<br>
+			상위 폴더에 있을 경우 형식 <img src='../0318/image/navy.jpg' title="소스코드형식">
+		</p>
+		
+		<p>
+			. = 현재위치
+			.. = 위로
+		</p>
+		
+		<img src='../image/navy.jpg' width="500px" height="400px">
+		<img src='../image/navy.jpg' style="width : 500px; height : 400px;">
+		
+		<h2 id="no2">웹상의 이미지표현</h2>
+	
+	 	<p>
+	 		이미지 주소 복사해서 붙여넣기
+	 	</p> 
+	 	
+	 	<img src='https://cdn.pixabay.com/photo/2016/11/19/16/56/adventure-1840310_960_720.jpg'>
+	 	
+	 	<br>
+	 	<br>
+	 	
+	 	<p>
+	 		alt="" : 이미지파일이 정상 로딩이 되지 않는 경우 이미지에 대한 설명을 넣는 속성 
+	 		<br>
+		 	title="" : 마우스를 갖다 대었을 때 보여지는 설명이 적힌 말풍선
+	 	</p>
+	 	
+	 	<a href="#">페이지 구성으로</a>
+	 	
+		
+		<h2 id="video">비디오 파일</h2>
+	
+		<video width="400px" height="300px" controls
+			poster ="../image/oops.jpg"
+			src="../video/Blue.mp4" autoplay muted>
+			
+			<track kind="subtitles" src="../video/smi.vtt"
+				srclang="ko" default>
+		</video>
+			
+		<video width="400px" height="300px" controls
+			poster ="../image/oops.jpg">
+			
+			<source src="../video/Blue0.mp4">
+		</video>
+		
+		<p>
+			autoplay : 창에 들어가자마자 재생 (사용하려면 muted와 함께 사용)
+			<br>
+			muted : 소리끄기 
+			<br>
+			controls : 컨트롤패널 만들기
+			<br>
+			poster : 비디오파일이 존재하지 않을 때 대체이미지를 보여줌
+			<br>
+			track kind="subtitles" : 자막삽입
+			<br>
+			srclang="ko" 소스 랭귀지(자막언어)
+		</p>
+		
+		<a href="#">페이지 구성으로</a>
+	
+	</body>
+</html>

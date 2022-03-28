@@ -1,0 +1,9 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+* { font-family: 'Noto Sans KR', sans-serif; }
+
+body{ text-align: center; margin : 0 auto; }
+table{ border-collapse: collapse; margin: 0 auto;}
+th{ border: 1px solid #222;  padding: 5px 10px;}
+td{ border: 1px solid #400;  padding: 5px 10px;}
+ul {list-style-type: none; padding : 0; }
