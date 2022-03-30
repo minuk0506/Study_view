@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>선택자</title>
+<style>
+table {
+	border-collapse: collapse;
+}
+table tr:first-child{
+	border-top: 2px solid #777;
+}
+table tr{
+	border-bottom: 1px solid #ccc;
+	height: 40px;
+}
+table th{
+	background-color: #eee;
+	text-align: left;
+}
+table tr{
+	text-indent: 20px;/* text-indent : 들여쓰기 */
+}
+table tr:last-child {
+	color:red;
+}
+table tr:nth-child(2) {
+	background-color: yellow;
+}
+table tr:nth-child(3) {
+	background-color: pink;
+}
+tr:nth-child(2n){
+	background-color: red;
+}
+tr:nth-child(2n+1){
+	background-color: blue;
+}
+table tr:not(:first-child, :last-child) {
+	color: green;
+}
+h3 + ul{
+	color: red;
+}
+</style>
+</head>
+<body>
+<a href="property.html">속성선택자</a>
+<a href="input.html">입력양식선택자</a>
+<h3>선택자</h3>
+
+<table>
+	<colgroup>
+		<col width="300px">
+		<col width="600px">
+	</colgroup>
+	<tr>
+		<th>상위요소 하위요소</th>
+		<td>상위요소에 대한 자손요소(자식포함)에 적용</td>
+	</tr>
+	<tr>
+		<th>상위요소 > 하위요소</th>
+		<td>상위요소에 대한 자식요소에 적용</td>
+	</tr>
+	<tr>
+		<th>요소:first-child</th>
+		<td>요소의 부모입장에서 볼때 첫번째 자식요소</td>
+	</tr>
+	<tr>
+		<th>요소:last-child</th>
+		<td>요소의 부모입장에서 볼때 마지막 자식요소</td>
+	</tr>
+	<tr>
+		<th>요소:nth-child(n)</th>
+		<td>요소의 부모입장에서 볼때 n번째 자식요소
+			: nth-child(1) = first-child
+		</td>
+	</tr>
+	<tr>
+		<th>요소:nth-last-child(n)</th>
+		<td>요소의 부모입장에서 볼때 뒤에서부터 n번째 자식요소
+			: nth-last-child(1) = last-child
+		</td>
+	</tr>
+	<tr>
+		<th>요소:nth-child(2n)</th>
+		<td>짝수번째 자식요소</td>
+	</tr>
+	<tr>
+		<th>요소:nth-child(2n+1)</th>
+		<td>홀수번째 자식요소</td>
+	</tr>
+	<tr>
+		<th>요소1 + 요소2</th>
+		<td>요소1 이후에 나오는 첫번째 형제 요소2에 대해 적용</td>
+	</tr>
+	<tr>
+		<th>요소:not()</th>
+		<td>요소의 부모입장에서 볼때 ()를 제외한 자식요소</td>
+	</tr>
+	
+</table>
+	<h3>요소의 속성 선택자</h3>
+	<ul>
+		<li>성명: <input type="text" name="user name"></li>
+		<li>아이디: <input type="text" name="user-id"></li>
+		<li>비밀번호: <input type="password" name="user-pw"></li>
+	</ul>
+	<ul>
+		<li><a title="이동" href="https://www.naver.com">네이버</a></li>
+		<li><a title="이동" href="https://www.daum.net">다음</a></li>
+		<li><a href="https://www.google.com">구글</a></li>
+		<li><a href="https://www.nate.com">네이트</a></li>
+		<li><a title="메일" href="mailto:admin@naver.com">관리자에게</a></li>
+	</ul>
+
+</body>
+</html>
