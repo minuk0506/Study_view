@@ -3,21 +3,76 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+input[type=text], input[type=password]{
+	height:25px;
+}
+input[type=checkbox]{
+	width:20px;
+	height: 20px;
+	vertical-align: middle;
+}
+/*
+input[type=radio]{
+	margin: 15px;
+	margin-right: 0;
+}
+*/
+input[type=radio]{
+	margin: 15px 0 15px 15px;
+}
+input:enabled{
+	background-color: red;
+}
+input:disabled{
+	color:red;
+	font-weight: bold;
+}
+input:focus{
+	background-color: yellow;
+}
+/* input:checked + label{
+	color:blue;
+	font-weight: bold;
+} 
+*/
+/* radio 와 checkbox 각각 checked 를 지정하려면 */
+input[type=radio]:checked + label { color: purple; font-weight: bold;}
+input[type=checkbox]:checked + label { color: green; font-weight: bold;}
+ul li:hover{
+	background-color: yellow;
+}
+ul li:active{
+	background-color: green;
+}
+</style>
+
 </head>
 <body>
+<!-- 
+동작이나 상태와 관련된 가상클래스
+선택자:enabled  활성화된 선택자 (입력 또는 선택이 가능한)
+선택자:disabled  비활성화된 선택자 (입력 또는 선택이 불가능한 상태)
+선택자:checked  체크박스나 라디오 버튼에서 체크된 선택자
+선택자:focus  커서를 갖는 선택자
+선택자:hover  마우스를 올렸을때 선택된 선택자
+선택자:active 클릭하고있는 동안 선택된 선택자
+ -->
+
 <h3>입력양식 선택자</h3>
 <ul>
-	<li>성명: <input type="text" name="name" value="홍길동"></li>
+	<li>성명: <input type="text" name="name" value="홍길동" disabled></li>
 	<li>아이디: <input type="text" name="id"></li>
 	<li>비밀번호: <input type="password" name="pw"></li>
 	<li>성별: 
-		<input type="radio" name="gender" value="남" id="male"><label for="male">남</label>
+		<input type="radio" name="gender" value="남" id="male" checked><label for="male">남</label>
 		<input type="radio" name="gender" value="여" id="female"><label for="female">여</label>
 	</li>
 	<li>취미: 
 		<input type="checkbox" name="hobby" value="운동" id="sports"><label for="sports">운동</label>
 		<input type="checkbox" name="hobby" value="유튜브" id="youtube"><label for="youtube">유튜브</label>
 		<input type="checkbox" name="hobby" value="게임" id="game"><label for="game">게임</label>
+		<input type="checkbox" name="hobby" value="책읽기" id="book"><label for="book">책읽기</label>
 	</li>
 </ul>
 </body>

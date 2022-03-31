@@ -42,11 +42,15 @@ table tr:not(:first-child, :last-child) {
 h3 + ul{
 	color: red;
 }
+h3 ~ ul{
+	background-color: aqua;
+}
 </style>
 </head>
 <body>
 <a href="property.html">속성선택자</a>
 <a href="input.html">입력양식선택자</a>
+<a href="../exercise/ex_Selec.html">선택자실습</a>
 <h3>선택자</h3>
 
 <table>
@@ -84,15 +88,19 @@ h3 + ul{
 	</tr>
 	<tr>
 		<th>요소:nth-child(2n)</th>
-		<td>짝수번째 자식요소</td>
+		<td>요소의 부모입장에서 볼때 짝수번째 자식요소</td>
 	</tr>
 	<tr>
 		<th>요소:nth-child(2n+1)</th>
-		<td>홀수번째 자식요소</td>
+		<td>요소의 부모입장에서 볼때 홀수번째 자식요소</td>
 	</tr>
 	<tr>
 		<th>요소1 + 요소2</th>
 		<td>요소1 이후에 나오는 첫번째 형제 요소2에 대해 적용</td>
+	</tr>
+	<tr>
+		<th>요소1 ~ 요소2</th>
+		<td>요소1 의 형제요소로 요소1 뒤로 나오는 모든 요소2</td>
 	</tr>
 	<tr>
 		<th>요소:not()</th>
