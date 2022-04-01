@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>dgk사이트2</title>
+<style>
+body{
+	margin: 0;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+header{
+	background-color: #0670b9;
+	height: 100px;
+	line-height: 100px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
+}
+header ul li{
+	float: left;
+}
+header nav, section{
+	width: 1200px;
+	margin: 0 auto;
+}
+header ul li:not(:last-child) {
+	margin-right: 100px;
+}
+header ul li a.on{
+	color: yellow;
+	border-bottom: 3px solid #fff;
+}
+h2 + p{
+	padding-bottom: 20px;
+	border-bottom: 2px solid #666;
+}
+#tab ul{
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #0670b9;
+	
+}
+#tab ul li{
+	float: left;
+	width: 200px;
+	border: 1px solid #aaa;
+	text-align: center;
+	border-bottom: none;
+	font-weight: bold;
+}
+#tab ul li:not(:last-child) {
+	border-right: none;
+}
+#tab ul li.on{
+	border: 1px solid #0670b9;
+	border-bottom: none;
+	color: #0670b9;
+}
+#search{
+	height: 36px;
+	margin-top: 30px;
+}
+#search div{
+	float: right;
+}
+#search a{
+	border: 1px solid #666;
+	line-height: 36px;
+	display: inline-block;
+	padding: 0 10px;
+	height: 34px;
+}
+#search a, #search input {
+	vertical-align: middle;
+}
+#search input {
+	border: 1px solid #666;
+	box-sizing: border-box;
+	padding: 0;
+	height: 36px;
+}
+#search input[type=text]{
+	padding-left: 10px;
+}
+#search input[type=button]{
+	background-color: #0670b9;
+	color: #fff;
+	border: 1px solid #0670b9;
+	padding: 0 20px;
+}
+#search a.on{
+	border: 1px solid #0670b9;
+	color: #0670b9;
+	text-decoration: underline;
+}
+#tb-list ul{
+	height: 50px;
+}
+#tb-list li:first-child {
+	float: left;
+}
+#tb-list li:last-child {
+	float: right;
+}
+article{
+	margin-top: 30px;
+}
+#tb-list li a:not(:first-child){
+	border-left: 1px solid ; 
+}
+#tb-list li a{
+	padding: 0 10px;
+}
+/* #eee 같은 색은 hexa값 (16진수) : 0~9abcdef 까지 있음 0으로갈수록 어둡고 f로 갈수록 밝음 */
+#tb-list table{
+	border-collapse: collapse;
+}
+#tb-list thead tr{
+	background-color: #eee;
+	border-top: 2px solid #666;
+}
+#tb-list td, #tb-list th{
+	padding: 15px 0;
+}
+#tb-list tbody td:not(:nth-child(2)) {
+	text-align: center;	
+}
+#tb-list tbody td:nth-child(2){
+	font-weight: bold;
+}
+#tb-list tbody td:nth-child(2):hover {
+	color: #0670b9;
+	text-decoration: underline;
+	cursor: pointer;
+}
+#tb-list tbody tr{
+	border-top: 1px solid #aaa;
+}
+#tb-list tbody tr:last-child{
+	border-bottom: 1px solid #aaa;
+}
+#paging{
+	line-height: 36px;
+	text-align: center;
+	margin:20px 0;
+}
+#paging a{
+	min-width: 36px;
+	height: 36px;
+	display: inline-block;
+}
+#paging a.on{
+	border: 1px solid #0670b9;
+}
+</style>
+</head>
+<body>
+<header>
+	<nav>
+		<ul>
+			<li><a href="">데이터찾기</a></li>
+			<li><a href="">국가데이터맵</a></li>
+			<li><a href="">데이터요청</a></li>
+			<li><a href="">데이터활용</a></li>
+			<li><a class="on" href="">정보공유</a></li>
+			<li><a href="">이용안내</a></li>
+		</ul>
+	</nav>
+</header>
+<section>
+	<h2>개발자 네트워크</h2>
+	<p>
+		개발자들 간의 각종 문제해결 방안, 개발 노하우, 데이터 가공 노하우 등을 자유롭게 참여하여 의견을 나눌 수 있는 공간입니다.
+	</p>
+	<article id="tab">
+		<ul>
+			<li class="on">개발 노하우</li>
+			<li>OPEN API 활용 문의</li>
+			<li>유용한 사이트</li>
+		</ul>
+	</article>
+	<article id="search">
+		<div>
+			<a class="on">제목+내용</a>
+			<a>제목</a>
+			<a>내용</a>
+			<input type="text" placeholder="검색어를 입력하세요">
+			<input type="button" value="검색">
+		</div>
+	</article>
+	<article id="tb-list">
+		<ul>
+			<li>전체 <span>433</span>건</li>
+			<li>
+				<a>최신 순</a>
+				<a>댓글 많은 순</a>
+				<a>좋아요 많은 순</a>
+				<a>조회 순</a>
+			</li>
+		</ul>
+		<table>
+			<colgroup>
+				<col width="80px">
+				<col>
+				<col width="100px">
+				<col width="80px">
+				<col width="80px">
+				<col width="120px">
+			</colgroup>
+			<thead>
+				<tr>
+					<th>No.</th>
+					<th>제목</th>
+					<th>등록자</th>
+					<th>조회수</th>
+					<th>좋아요</th>
+					<th>등록일</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td><a href="">ERR_CONNECTION_TIMED_OUT 오류 python에서 requests를 반복 요청할 때 생기는 문제 해결을 도움 받고 싶습니다.</a></td>
+					<td>조규*</td>
+					<td>97</td>
+					<td>0</td>
+					<td>2022-03-05</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td><a href="">C#) 400오류 : 서울올림픽기념국민체육진흥공단_체육시설정보 서비스</a></td>
+					<td>노준*</td>
+					<td>150</td>
+					<td>0</td>
+					<td>2022-01-19</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td><a href="">NO OPENAPI SERVICE ERROR가 나네요...</a></td>
+					<td>강정*</td>
+					<td>696</td>
+					<td>0</td>
+					<td>2021-11-06</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td><a href="">SERVICE KEY IS NOT REGISTERED ERROR.</a></td>
+					<td>이정*</td>
+					<td>818</td>
+					<td>3</td>
+					<td>2021-10-15</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td><a href="">한국소비자원 생필품 및 서비스 가격 정보 api 인증키 에러</a></td>
+					<td>심현*</td>
+					<td>238</td>
+					<td>1</td>
+					<td>2021-10-07</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td><a href="">기상청 API로 날씨 앱 구현 시, 클라이언트에서 직접 호출 하시는지 서버에서 호출 하시는지 궁금합니다.</a></td>
+					<td>박정*</td>
+					<td>541</td>
+					<td>3</td>
+					<td>2021-09-23</td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td><a href="">배치 프로세스 관련 문의</a></td>
+					<td>이기*</td>
+					<td>460</td>
+					<td>2</td>
+					<td>2021-08-04</td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td><a href="">인증키 관련 문의 드립니다.</a></td>
+					<td>박일*</td>
+					<td>756</td>
+					<td>4</td>
+					<td>2021-07-16</td>
+				</tr>
+				<tr>
+					<td>9</td>
+					<td><a href="">전월세 api 에러코드 99 뭘까요?</a></td>
+					<td>장영*</td>
+					<td>978</td>
+					<td>3</td>
+					<td>2021-07-08</td>
+				</tr>
+				<tr>
+					<td>10</td>
+					<td><a href="">데이터 분석가 과정 (데잇걸즈 5기) 모집</a></td>
+					<td>허윤*</td>
+					<td>1038</td>
+					<td>1</td>
+					<td>2021-06-06</td>
+				</tr>
+			</tbody>
+		</table>
+	</article>
+	<div id="paging">
+		<a class="on">1</a>
+		<a>2</a>
+		<a>3</a>
+		<a>4</a>
+		<a>5</a>
+		<a>6</a>
+		<a>7</a>
+		<a>8</a>
+		<a>9</a>
+		<a>10</a>
+	</div>
+</section>
+<footer>
+
+</footer>
+</body>
+</html>

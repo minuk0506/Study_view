@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>dgk사이트</title>
 <style>
 body{
 	margin:0;
@@ -57,17 +57,29 @@ section>div:first-child{
 	color : white;
 }
 section>div:nth-child(2) ul{
+	margin: 0;
 	padding: 0;
+	border-bottom: 1px solid #0670b9;
+	box-sizing: border-box;
 }
 section>div:nth-child(2) li{
 	display: inline-block;
 	padding: 0;
 	font-weight:bold;
 }
+section>div:nth-child(2) ul li:first-child a{
+	display: inline-block;
+	font-weight:bold;
+	border: 1px solid #0670b9;
+	border-bottom: none;
+	color: #0670b9;
+	
+}
 section>div:nth-child(2) a{
 	border: 1px solid #ccc;
 	color: #333;
-	padding: 15px 40px;
+	padding: 12px 50px;
+	border-bottom: none;
 }
 section>div:nth-child(2) a:checked{
 	border: 1px solid #0670b9;
@@ -134,6 +146,32 @@ aside p a{
 select{
 	width: 150px;
 	height: 40px;
+}
+.footer p{
+	display: inline-block;
+	margin: 5px 15px;
+}
+.footer a:hover{
+	text-decoration: underline;
+}
+.pageBtn{
+	text-align: center;
+	margin: 10px;
+	margin-top: 30px;
+}
+.pageBtn button{
+	padding: 7px 10px;
+	box-sizing: border-box;
+	border: none;
+}
+.pageBtn button:hover{
+	border: 1px solid #0670b9;
+}
+.pageBtn button:last-child, .pageBtn button:first-child, .pageBtn button:nth-child(2), .pageBtn button:nth-last-child(2){
+	border: 1px solid #ccc;
+}
+.pageBtn button:checked {
+	border: 1px solid #0670b9;
 }
 </style>
 </head>
@@ -277,7 +315,7 @@ select{
 					</tr>
 				</tbody>
 			</table>			
-			<div>
+			<div class="pageBtn">
 				<button class="basicBtn"><<</button>
 				<button class="basicBtn"><</button>
 				<button class="basicBtn">1</button>
@@ -326,13 +364,15 @@ select{
 				<button>이동</button>
 			</div>
 		</div>
-		<div>
-			<p>(30116) 세종특별자치시 한누리대로 411(어진동, 행정안전부 별관)</p>
-			<p>대표번호 : <span><a href="">1566-0025</a></span></p>
-			<p>문의시간 : 09:00~18:00 (월~금)</p>
-		</div>
-		<div>
-			<p>ⓒ행정안전부. All rights reserved.</p>
+		<div class="footer">
+			<div>
+				<p>(30116) 세종특별자치시 한누리대로 411(어진동, 행정안전부 별관)</p>
+				<p>대표번호 : <span><a href="">1566-0025</a></span></p>
+				<p>문의시간 : 09:00~18:00 (월~금)</p>
+			</div>
+			<div>
+				<p>ⓒ행정안전부. All rights reserved.</p>
+			</div>
 		</div>
 	</footer>
 </div>
