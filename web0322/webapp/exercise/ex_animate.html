@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>hrd-net 움직이는 거 따라하기</title>
+<style>
+body{
+	margin:0;
+}
+#trans{
+	margin:50px;
+}
+.transform{
+	position: relative;
+	overflow: hidden;
+}
+ul{
+	list-style: none;
+	padding:0;
+	margin:0;
+}
+li{
+	text-align: center;
+	margin: 20px;
+	float: left;
+}
+h3{
+	display: inline-block;
+	width: 365px;
+	height: 160px;
+	line-height: 160px;
+	border: 1px solid #000;
+	background-color: aqua;
+}
+#trans .step{
+	position:absolute;
+	width: 2310px;
+	height: 160px;
+	animation: animate_step 8s 2s infinite normal;
+}
+@keyframes animate_step{
+	from{left:0px;}
+	to{left:-2310px;}
+}
+</style>
+</head>
+<body>
+<div id="trans">
+	<div class="transform">
+		<div class="step">
+			<ul>
+				<li><img src="img1.jpg">빅데이터</li>
+				<li>사물 인터넷</li>
+				<li>스마트 제조</li>
+				<li><h3>인공지능</h3></li>
+				<li><h3>클라우드 컴퓨팅</h3></li>
+				<li><h3>정보보안</h3></li>
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>
