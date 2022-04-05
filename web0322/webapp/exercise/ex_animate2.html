@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>hrd-net 움직이는 거 따라하기</title>
+<style>
+#k-digital{
+	width: 1240px; /* 400 * 3, 20 * 2 */
+	margin: 100px auto; 
+}
+.slide-wrap{
+	width: 1240px;
+	height: 170px;
+	position: relative;
+	overflow: hidden;
+}
+.slide ul{
+	list-style-type: none;
+	margin:0;
+	padding:0;
+}
+.slide ul li{
+	float:left;
+	box-sizing: border-box;
+	background-color: #e6eeff;
+}
+.slide li:not(:last-child){
+	margin-right: 20px;
+}
+.slide {
+	position: absolute;
+	width: 2500px; /* 400 * 6, 20 * 5 */
+	height: 170px;
+}
+.training{
+	width: 400px;
+	height: 170px;
+	border: 1px solid #ddd;
+}
+.training div{
+	margin:15px;
+}
+.training img{
+	float:left;
+	width:48px;
+	height: 48px;
+}
+.training strong{
+	line-height: 48px;
+	margin-left: 10px;
+}
+.training p {
+	font-size: 15px;
+}
+#k-digital .slide{
+	animation: k-digital 9s steps(3, start) 3s infinite;
+}
+@keyframes k-digital{
+	from{ left:0px;}
+	to{left:-1260px;}
+}
+</style>
+</head>
+<body>
+<div id="k-digital">
+	<div class="slide-wrap">
+		<div class="slide">
+			<ul>
+				<li class="training">
+					<div>
+						<img src="../images/icon01.png">
+						<strong>무인이동체</strong>
+						<p>설명</p>
+					</div>
+				</li>
+				<li class="training">
+					<div>
+						<img src="../images/icon02.png">
+						<strong>무인이동체</strong>
+						<p>설명</p>
+					</div>
+				</li>
+				<li class="training">
+					<div>
+						<img src="../images/icon03.png">
+						<strong>무인이동체</strong>
+						<p>설명</p>
+					</div>
+				</li>
+				<li class="training">
+					<div>
+						<img src="../images/icon04.png">
+						<strong>무인이동체</strong>
+						<p>설명</p>
+					</div>
+				</li>
+				<li class="training">
+					<div>
+						<img src="../images/icon05.png">
+						<strong>무인이동체</strong>
+						<p>설명</p>
+					</div>
+				</li>
+				<li class="training">
+					<div>
+						<img src="../images/icon06.png">
+						<strong>무인이동체</strong>
+						<p>설명</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>
